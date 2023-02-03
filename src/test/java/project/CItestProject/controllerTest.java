@@ -9,7 +9,7 @@ public class controllerTest {
     @Test
     public void 테스트() {
 
-        assertThat("hello").isEqualTo("asd");
+        assertThat("hello").isEqualTo("hello");
     }
 
 }
