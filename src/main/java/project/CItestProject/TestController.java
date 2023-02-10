@@ -11,7 +11,7 @@ public class TestController {
 
     @GetMapping
     public ResponseEntity getFunc() {
-        return ResponseEntity.ok("hello");
+        return ResponseEntity.ok("helloㅁㄴㅇㄹ");
     }
 
 }
