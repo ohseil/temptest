@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
 
-    @Value("${spring.security.api-key}")
+    @Value("${kakao.api.key}")
     private String a;
 
     @GetMapping

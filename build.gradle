@@ -28,5 +28,4 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 	systemProperties = System.getProperties()
-	//systemProperty "spring.key", System.getProperty("spring.key")
 }

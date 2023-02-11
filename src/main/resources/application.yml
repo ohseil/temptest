@@ -1,6 +1,4 @@
 spring:
   profiles:
     include:
-      - secr
-  security:
-    api-key: ${api-key}
+      - security
