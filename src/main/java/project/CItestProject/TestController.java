@@ -17,6 +17,7 @@ public class TestController {
     public ResponseEntity<String> getFunc() {
         String b = a;
         String d = a;
+        String c = b;
         return ResponseEntity.ok(a);
     }
 
