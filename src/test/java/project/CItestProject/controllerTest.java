@@ -1,8 +1,8 @@
 package project.CItestProject;
 
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
@@ -19,6 +19,9 @@ public class controllerTest {
     @Autowired
     MockMvc mockMvc;
 
+    @Value("${kakao.api.key}")
+    private String data;
+
     @Test
     public void 테스트() throws Exception {
 
@@ -32,6 +35,7 @@ public class controllerTest {
                 .andReturn();
 
         assertThat(mvcResult.getResponse().getContentAsString()).isEqualTo("hello");
+        assertThat(data).isEqualTo("hello");
     }
 
 }
