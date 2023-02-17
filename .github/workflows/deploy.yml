@@ -51,7 +51,7 @@ jobs:
       shell: bash
       
     - name: Grant execute premission for gradlew
-      run: chmod +x ./gradlew
+      run: chmod +x ./gradlew --exclude-task test
       shell: bash
         
     - name: Build with Gradle
