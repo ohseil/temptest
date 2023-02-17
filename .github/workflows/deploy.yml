@@ -51,11 +51,11 @@ jobs:
       shell: bash
       
     - name: Grant execute premission for gradlew
-      run: chmod +x ./gradlew --exclude-task test
+      run: chmod +x ./gradlew
       shell: bash
         
     - name: Build with Gradle
-      run: ./gradlew build
+      run: ./gradlew build --exclude-task test
       shell: bash
       
       #프로젝트 zip파일로 압축
