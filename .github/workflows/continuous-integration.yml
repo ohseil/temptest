@@ -20,7 +20,12 @@ jobs:
     runs-on: ubuntu-latest
     env:
       kakao-api-key: ${{secrets.TEST_KEY}}
+      github-client-id: ${{secrets.CLIENT_ID_GITHUB}}
+      github-client-secrets: ${{secrets.CLIENT_SECRETS_GITHUB}}
+      access-token-secret-key: ${{secrets.ACCESS_TOKEN_SECRET_KEY}}
+      access-token-valid-time: ${{secrets.ACCESS_TOKEN_VALID_TIME}}
       refresh-token-secret-key: ${{secrets.REFRESH_TOKEN_SECRET_KEY}}
+      refresh-token-valid-time: ${{secrets.REFRESH_TOKEN_VALID_TIME}}
     steps:
     
       - name: Checkout
