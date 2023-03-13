@@ -19,7 +19,7 @@ jobs:
   
     runs-on: ubuntu-latest
     env:
-      kakao-api-key: ${{secrets.KAKAO_API_KEY}}
+      kakao-api-key: ${{secrets.TEST_KEY}}
     steps:
     
       - name: Checkout
