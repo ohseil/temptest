@@ -19,7 +19,7 @@ public class controllerTest {
     @Autowired
     MockMvc mockMvc;
 
-    @Value("${github.api.client-id}")
+    /*@Value("${github.api.client-id}")
     private String githubClientId;
     @Value("${github.api.client-secrets}")
     private String githubClientSecrets;
@@ -30,8 +30,10 @@ public class controllerTest {
     @Value("${jwt.access-token.valid-time}")
     private Long accessTokenValidTime;
     @Value("${jwt.refresh-token.valid-time}")
-    private Long refreshTokenValidTime;
+    private Long refreshTokenValidTime;*/
 
+    @Value("${jwt.refresh-token.secret-key}")
+    private String refreshTokenKey;
     @Value("${kakao.api.key}")
     private String kakaoApiKey;
 
