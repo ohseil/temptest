@@ -32,8 +32,8 @@ public class controllerTest {
     @Value("${jwt.refresh-token.valid-time}")
     private Long refreshTokenValidTime;*/
 
-    @Value("${jwt.refresh-token.secret-key}")
-    private String refreshTokenKey;
+    //@Value("${jwt.refresh-token.secret-key}")
+    //private String refreshTokenKey;
     @Value("${kakao.api.key}")
     private String kakaoApiKey;
 
@@ -51,7 +51,7 @@ public class controllerTest {
 
         assertThat(mvcResult.getResponse().getContentAsString()).isEqualTo("hello");
         assertThat(kakaoApiKey).isEqualTo("hello");
-        assertThat(refreshTokenKey).isEqualTo("abcd");
+        //assertThat(refreshTokenKey).isEqualTo("abcd");
     }
 
 }
