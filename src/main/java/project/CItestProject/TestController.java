@@ -27,7 +27,6 @@ public class TestController {
 
     @GetMapping
     public ResponseEntity<String> getFunc() {
-        String b = "";
         String c = githubClientId;
         String d = githubClientSecrets;
         String e = accessTokenKey;
