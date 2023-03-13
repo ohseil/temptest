@@ -19,12 +19,22 @@ public class controllerTest {
     @Autowired
     MockMvc mockMvc;
 
-    @Value("${kakao.api.key}")
-    private String data;
+    @Value("${github.api.client-id}")
+    private String githubClientId;
+    @Value("${github.api.client-secrets}")
+    private String githubClientSecrets;
+    @Value("${jwt.access-token.secret-key}")
+    private String accessTokenKey;
+    @Value("${jwt.refresh-token.secret-key}")
+    private String refreshTokenKey;
+    @Value("${jwt.access-token.valid-time}")
+    private Long accessTokenValidTime;
+    @Value("${jwt.refresh-token.valid-time}")
+    private Long refreshTokenValidTime;
 
     @Test
     public void 테스트() throws Exception {
-
+        System.out.println(githubClientId + githubClientSecrets + accessTokenKey + refreshTokenKey + accessTokenValidTime + refreshTokenValidTime);
         final MvcResult mvcResult = mockMvc.perform(
                         get("/func")
                                 .contentType(MediaType.APPLICATION_JSON)
@@ -35,7 +45,7 @@ public class controllerTest {
                 .andReturn();
 
         assertThat(mvcResult.getResponse().getContentAsString()).isEqualTo("hello");
-        assertThat(data).isEqualTo("hello");
+        assertThat(refreshTokenKey).isEqualTo("abcd");
     }
 
 }

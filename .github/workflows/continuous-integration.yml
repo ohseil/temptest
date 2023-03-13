@@ -20,6 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       kakao-api-key: ${{secrets.KAKAO_API_KEY}}
+      refresh-token-secret-key: ${{secrets.REFRESH_TOKEN_SECRET_KEY}}
     steps:
     
       - name: Checkout
@@ -35,4 +36,4 @@ jobs:
         run: ./gradlew build --exclude-task test
       
       - name: Test
-        run: ./gradlew test -Dkakao.api.key=${{env.kakao-api-key}}
+        run: ./gradlew test -Dkakao.api.key=${{env.kakao-api-key}} -Djwt.refresh-token.secret-key=${{env.refresh-token-secret-key}}
