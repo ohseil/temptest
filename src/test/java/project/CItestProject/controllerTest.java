@@ -52,9 +52,9 @@ public class controllerTest {
         assertThat(refreshTokenKey).isEqualTo("abcd");
         assertThat(githubClientId).isEqualTo("githubid");
         assertThat(githubClientSecrets).isEqualTo("githubsecret");
-        assertThat(refreshTokenValidTime).isEqualTo("rvalid");
+        assertThat(refreshTokenValidTime).isEqualTo(20000);
         assertThat(accessTokenKey).isEqualTo("accesstoken");
-        assertThat(accessTokenValidTime).isEqualTo("avalid");
+        assertThat(accessTokenValidTime).isEqualTo(18000);
 
     }
 
