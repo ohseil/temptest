@@ -32,6 +32,9 @@ public class controllerTest {
     @Value("${jwt.refresh-token.valid-time}")
     private Long refreshTokenValidTime;
 
+    @Value("${kakao.api.key}")
+    private String kakaoApiKey;
+
     @Test
     public void 테스트() throws Exception {
         System.out.println(githubClientId + githubClientSecrets + accessTokenKey + refreshTokenKey + accessTokenValidTime + refreshTokenValidTime);
@@ -45,7 +48,7 @@ public class controllerTest {
                 .andReturn();
 
         assertThat(mvcResult.getResponse().getContentAsString()).isEqualTo("hello");
-        assertThat(refreshTokenKey).isEqualTo("abcd");
+        assertThat(kakaoApiKey).isEqualTo("hello");
     }
 
 }
