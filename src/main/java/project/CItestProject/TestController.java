@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
 
-    //@Value("${kakao.api.key}")
-    //private String a;
+    @Value("${kakao.api.key}")
+    private String a;
     @Value("${github.api.client-id}")
     private String githubClientId;
     @Value("${github.api.client-secrets}")
