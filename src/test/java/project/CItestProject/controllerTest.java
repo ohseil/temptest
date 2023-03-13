@@ -37,7 +37,7 @@ public class controllerTest {
 
     @Test
     public void 테스트() throws Exception {
-        System.out.println(githubClientId + githubClientSecrets + accessTokenKey + refreshTokenKey + accessTokenValidTime + refreshTokenValidTime);
+        //System.out.println(githubClientId + githubClientSecrets + accessTokenKey + refreshTokenKey + accessTokenValidTime + refreshTokenValidTime);
         final MvcResult mvcResult = mockMvc.perform(
                         get("/func")
                                 .contentType(MediaType.APPLICATION_JSON)
@@ -49,6 +49,7 @@ public class controllerTest {
 
         assertThat(mvcResult.getResponse().getContentAsString()).isEqualTo("hello");
         assertThat(kakaoApiKey).isEqualTo("hello");
+        assertThat(refreshTokenKey).isEqualTo("abcd");
     }
 
 }
