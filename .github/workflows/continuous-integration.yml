@@ -16,9 +16,9 @@ permissions:
   contents: read
 
 jobs:
-  if: github.event.pull_request.merged == true
   build:
-  
+    if: github.event.pull_request.merged == true
+
     runs-on: ubuntu-latest
     env:
       kakao-api-key: ${{secrets.TEST_KEY}}
