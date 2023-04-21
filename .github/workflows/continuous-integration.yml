@@ -9,7 +9,8 @@ on:
     branches:
       - main
       - develop
-    types: [ opened, synchronize ]
+    types:
+      - closed
 
 permissions:
   contents: read
